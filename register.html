@@ -1,725 +1,126 @@
 <!DOCTYPE html>
 <html>
-
+<style>
+        #imgSection{
+        width: 100%; height: 30xp; margin-bottom: 20px;margin-top: 20px;
+    }
+</style>
 <head>
 
-	<meta charset="utf-8" />
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>register</title>
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-
-	<!--     Fonts and icons     -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
-	<!-- CSS Files -->
-	<link href="assets2/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets2/css/material-kit.css" rel="stylesheet" />
-
-	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link href="assets2/css/demo.css" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="CSCampX">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="regis/assets/images/logo-main-800x594.png" type="image/x-icon">
+    <meta name="description" content="Web Site Generator Description">
+    <title>ตอบคำถามเพิ่มเติม</title>
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="regis/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="regis/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="regis/assets/animatecss/animate.min.css">
+    <link rel="stylesheet" href="regis/assets/theme/css/style.css">
+    <link rel="stylesheet" href="regis/assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 </head>
-<script>
-	function page1back() {
-		$("#page2").removeClass("active");
-		$("#page1").addClass("active");
-	}
-	function page2() {
-		$("#page1").removeClass("active");
-		$("#page2").addClass("active");
-	}
-	function page3() {
-		$("#page2").removeClass("active");
-		$("#page3").addClass("active");
-	}
-	function page2back() {
-		$("#page3").removeClass("active");
-		$("#page2").addClass("active");
-	}
-</script>
-<script type="text/javascript">
-	function Format(obj, check) {
-		if (check == 1) {
-			var pattern = new String("_-____-_____-__-_");
-			var pattern_ex = new String("-");
-		} else if (check == 2) {
-			var pattern = new String("_:__");
-			var pattern_ex = new String(":");
-		}
-		else if (check == 3) {
-			var pattern = new String("___-___-____");
-			var pattern_ex = new String("-");
-		}
-		var returnText = new String("");
-		var obj_l = obj.value.length;
-		var obj_l2 = obj_l - 1;
-		for (i = 0; i < pattern.length; i++) {
-			if (obj_l2 == i && pattern.charAt(i + 1) == pattern_ex) {
-				returnText += obj.value + pattern_ex;
-				obj.value = returnText;
-			}
-		}
-		if (obj_l >= pattern.length) {
-			obj.value = obj.value.substr(0, pattern.length);
-		}
-	}
-</script>
+
+<body style=" background-image: url('doodles.png'); background-repeat: repeat;">
+    <section style="background-color:rgba(255, 255, 255, 0.719);" class="mbr-section form1 cid-qIdT3wx9i7" id="form1-2c">
 
 
-<script>
-	function previewFilePro() {
-		var preview = document.querySelector('#imgpro');
-		var file = document.querySelector('#inputPro').files[0];
-		var reader = new FileReader();
-
-		reader.onloadend = function () {
-			preview.src = reader.result;
-		}
-
-		if (file) {
-			reader.readAsDataURL(file);
-		} else {
-			preview.src = "";
-		}
-	}
-
-	previewFilePro();
-</script>
-<script>
-	function previewFile() {
-		var preview = document.querySelector('#imgBlis');
-		var file = document.querySelector('#inputBlis').files[0];
-		var reader = new FileReader();
-
-		reader.onloadend = function () {
-			preview.src = reader.result;
-		}
-
-		if (file) {
-			reader.readAsDataURL(file);
-		} else {
-			preview.src = "";
-		}
-	}
-
-	previewFile();
-</script>
 
 
-<body>
-	<div class="section section-tabs">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="title">
-						<center>
-							<h2>ข้อมูลผู้สมัคร</h2>
-						</center>
-						<center>
-							<h3>เอกสารสมัครค่ายฝึกอบรมเชิงปฏิบัติการวิทยาการคอมพิวเตอร์ ครั้งที่ 10 </h3>
-						</center>
-					</div>
-
-					<!-- Tabs with icons on Card -->
-					<div class="card card-nav-tabs">
-						<div class="header header-primary">
-							<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-							<div class="nav-tabs-navigation">
-								<div class="nav-tabs-wrapper">
-									<ul class="nav nav-tabs">
-										<li id="page1" class="active">
-											<a href="#">
-												<i class="material-icons">face</i>
-												ข้อมูลส่วนตัว
-											</a>
-										</li>
-										<li id="page2">
-											<a href="#">
-												<i class="material-icons">chat</i>
-												ตอบคำถาม
-											</a>
-										</li>
-										<li id="page3">
-											<a href="#">
-												<i class="material-icons">verified_user</i>
-												การยืนยันสิทธ์
-											</a>
-										</li>
-
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="content">
-							<div class="tab-content ">
-								<div class="tab-pane active" id="profile">
-									<form action="" method="post">
-										<br>
-										<br>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label>อัพโหลดรูปถ่าย</label>
-												<img style="border: 2px solid rgb(128, 73, 73); border-radius: 5px;" id="imgpro" src="befroe.png" width="200">
-												<br>
-												<br>
-												<input id="inputPro" type="file" name="UserImg" onchange="previewFilePro()">
-											</div>
-										</div>
-
-										<div class="col-sm-2 dropdown">
-											<label>คำนำหน้า</label>
-											<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
-												<option value="นาย">นาย</option>
-												<option value="นางสาว">นางสาว</option>
-												<ul class="dropdown-menu">
-													<li>
-														<a href="#">นาย</a>
-													</li>
-													<li>
-														<a href="#">นางสาว</a>
-													</li>
-
-												</ul>
-											</select>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label">ชื่อจริง</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label">นามสกุล</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
+        <div style="font-family: 'Prompt', sans-serif;" class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-lg-8">
+                    <h2 style="font-family: 'Prompt', sans-serif;" class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">ข้อมูลผู้สมัคร</h2>
+                    <h3 style="font-family: 'Prompt', sans-serif;" class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">เอกสารสมัครค่ายฝึกอบรมเชิงปฏิบัติการวิทยาการคอมพิวเตอร์ ครั้งที่ 10.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="background-color:rgba(218, 218, 218, 0.5);">
+            <div class="row justify-content-center">
+                <div class="media-container-column col-lg-12" data-form-type="formoid">
 
 
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label">ชื่อเล่น</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
+                    <form class="mbr-form" action="" method="post">
+            <img src="setionbar.png" id="imgSection" width="120%" height="20px;">
+                        <div class="form-group" data-for="EX1">
+                            <br>
+                            <label style="font-family: 'Prompt', sans-serif;" class="form-control-label mbr-fonts-style display-7" for="message-form1-2c">1. หากในอนาคตอันใกล้นี้ มีการสร้างไทม์แมชชีน (Time Machine) ขึ้นมา แล้วน้องได้รับโอกาสให้ใช้งาน
+                                1 ครั้ง โดยจะสามารถไปยังอดีต หรือ อนาคต ก็ได้ น้องจะเลือกไปยังที่ใด ให้อธิบายพร้อมบอกเหตุผลประกอบมาพอสังเขป</label>
+                            <textarea type="text" class="form-control" name="EX1" rows="5" data-form-field="EX1" id="message-form1-2c"></textarea>
+                        </div>
+                                    <img src="setionbar.png" id="imgSection" width="120%" height="20px;">
+                        <br>
+                        <br>
+                        <div class="row row-sm-offset">
+                            <div class="col-md-1 multi-horizontal" data-for="EX2">
+                                <div class="form-group form-control-label mbr-fonts-style display-7">
+                                    <h5 style=" font-family: 'Prompt', sans-serif;">2. เคยเขียนโปรแกรม (โปรแกรมมิ่ง) มาก่อนหรือไม่</h4s>
+                                        <input style="font-family: 'Prompt', sans-serif; width:20px; margin-left:50px;" type="radio" name="EX2" value="Yes" checked> เคย
+                                        <input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="EX2" value="No" checked>ไม่เคย
 
-										<div class="col-md-2 dropdown">
-											<label>เพศ</label>
-											<br>
-											<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
-												<option value="ชาย">ชาย</option>
-												<option value="หญิง">หญิง</option>
-												<ul class="dropdown-menu">
-													<li>
-														<a href="#">ชาย</a>
-													</li>
-													<li>
-														<a href="#">หญิง</a>
-													</li>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+           
+            <img src="setionbar.png" id="imgSection" width="120%" height="20px;">
+                    <div class="form-group" data-for="EX3">
+                        <br>
+                        <label style="font-family: 'Prompt', sans-serif;" class="form-control-label mbr-fonts-style display-7" for="message-form1-2c">3. เคยเข้าร่วมการแข่งขันทางด้านเทคโนโลยี หรือคอมพิวเตอร์ใดมาบ้าง (หากได้รับรางวัล ให้ระบุรางวัล หรือตำแหน่งที่ได้รับมาด้วย)</label>
+                        <br>
+                        <br>
+                        <h5 style="font-family: 'Prompt', sans-serif;">
+                            <input style="font-family: 'Prompt', sans-serif; width:20px; margin:0 auto;" type="radio" name="EX3"
+                                value="เคย" checked> เคย(หากเคยให้ใส่รายละเอียดเพิ่มติมด้วย)
+                            <input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="EX3" value="ไม่เคย" checked>ไม่เคย </h5>
+                        <br>
+                        <br>
+                        <textarea type="text" class="form-control" name="EX3Text" rows="2" data-form-field="EX3Text" id="message-form1-2c"></textarea>
+                        <br>
+                        <br>
+                                    <img src="setionbar.png" id="imgSection" width="120%" height="20px;">
+                    </div>
+                    </form>
 
-												</ul>
-											</select>
-										</div>
-										<div class="col-md-2 dropdown">
-											<label>Size เสื้อ</label>
-											<br>
-											<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
-												<option value="s">s</option>
-												<option value="m">m</option>
-												<option value="l">l</option>
-												<option value="xl">xl</option>
-												<ul class="dropdown-menu">
-													<li>
-														<a href="#">s</a>
-													</li>
-													<li>
-														<a href="#">m</a>
-													</li>
-													<li>
-														<a href="#">l</a>
-													</li>
-													<li>
-														<a href="#">xl</a>
-													</li>
-												</ul>
-											</select>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label">เลขบัตรประชาชน</label>
-												<input maxlength="17" type="text" id="idcard" onkeyup="Format(this,1)" class="form-control">
-											</div>
-										</div>
-										<br>
-
-										<div class="col-md-4">
-											<div class="form-group label-static">
-												<label class="control-label">วันเกิด</label>
-												<input type="date" class="form-control" name="Date" data-form-field="Date" required="" id="name-form1-2c">
-											</div>
-
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label">อายุ(ปี)</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> ศาสนา</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="form-group label-floating">
-												<label class="control-label">ที่อยู่ที่สามารถติดต่อได้</label>
-												<textarea class="form-control" rows="4"></textarea>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label"> เบอร์โทรศัพท์</label>
-												<input  maxlength="12"type="text" onkeyup="Format(this,3)" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label"> Line ID</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label"> Email</label>
-												<input type="email" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="form-group label-floating">
-												<label class="control-label"> Facebook(Link Profile)</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<center>
-												<h3>ข้อมูลทางการศึกษา</h3>
-											</center>
-										</div>
-
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> โรงเรียน</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> สถานที่ตั้ง</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-
-										<div class="col-md-4 dropdown">
-											<label>ชั้นมัธยมศึกษาปีที่</label>
-											<br>
-											<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
-												<option value="ม4">ม.4</option>
-												<option value="ม5">ม.5</option>
-												<ul class="dropdown-menu">
-													<li>
-														<a href="#">ม.4</a>
-													</li>
-													<li>
-														<a href="#">ม.5</a>
-													</li>
-
-												</ul>
-											</select>
-										</div>
-										<div class="col-md-4 dropdown">
-											<label>แผนการเรียน</label>
-											<br>
-											<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
-												<option value="วิทย์-คณิต">วิทย์-คณิต</option>
-												<ul class="dropdown-menu">
-													<li>
-														<a href="#">วิทย์-คณิต</a>
-													</li>
-
-												</ul>
-											</select>
-										</div>
-
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เกรดเฉลี่ย</label>
-												<input type="text" onkeyup="Format(this,2)" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<center>
-												<h3>ข้อมูลด้านสุขภาพ</h3>
-											</center>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> อาหารที่แพ้</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> ยาที่แพ้</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> โรคประจำตัว</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="form-group label-floating">
-												<label class="control-label">วิธีการรักษาเบื้องต้น</label>
-												<textarea class="form-control" rows="4"></textarea>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เบอร์ติดต่อฉุกเฉิน</label>
-												<input maxlength="12" type="text" onkeyup="Format(this,3)" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เกี่ยวข้องเป็น</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<center>
-												<h3>ข้อมูลผู้ปกครอง</h3>
-											</center>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> ชื่อจริง</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> นามสกุล</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เกี่ยวข้องเป็น</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="form-group label-floating">
-												<label class="control-label">ที่อยู่ที่สามารถติดต่อได้</label>
-												<textarea class="form-control" rows="4"></textarea>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เบอร์โทรศัพท์</label>
-												<input maxlength="12" type="text" onkeyup="Format(this,3)" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<center>
-												<h3>ข้อมูลการเดินทาง</h3>
-											</center>
-										</div>
-										<div class="col-md-12">
-											<h4>สถานที่ที่น้องๆต้องการให้พี่ไปรับ (เลือกได้เพียง 1 ตัวเลือกเท่านั้น )</h4>
-
-											<input type="radio" name="getLoction" value="Airportลาดกระบัง" checked> สถานีรถไฟฟ้าแอร์พอร์ตเรลลิงค์ลาดกระบัง
-											<br>
-											<input type="radio" name="getLoction" value="สถานีรถไฟกรุงเทพ(หัวลำโพง)" checked> สถานีรถไฟกรุงเทพ(หัวลำโพง)
-											<br>
-											<input type="radio" name="getLoction" value="สถานีขนส่งผู้โดยสารกรุงเทพ(หมอชิตใหม่)" checked> สถานีขนส่งผู้โดยสารกรุงเทพ(หมอชิตใหม่)
-											<br>
-											<input type="radio" name="getLoction" value="อนุเสาว์รีย์ชัยสมรภูมิ" checked> อนุเสาว์รีย์ชัยสมรภูมิ
-											<br>
-											<input type="radio" name="getLoction" value="เดินทางมาด้วยตนเอง" checked> เดินทางมาด้วยตนเอง
-											<br>
-
-										</div>
-										<br>
-										<br>
-										<div class="col-md-12">
-											<h4 style=" font-family: 'Prompt', sans-serif; margin-left:50px;">-เคยผ่านการเข้าร่วมกิจกรรมค่ายต่างๆมาก่อนหรือไม่</h4>
-											<input style="font-family: 'Prompt', sans-serif; width:20px; margin-left:50px;" type="radio" name="Camp" value="Yes" checked> เคย
-											<input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="Camp" value="No" checked>ไม่เคย(ถ้าไม่มีให้ข้ามไปก่อนเลย)
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> ชื่อค่าย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> จัดโดย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> ชื่อค่าย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> จัดโดย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> ชื่อค่าย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group label-floating">
-												<label class="control-label"> จัดโดย</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<center>
-												<h3>อาจารย์ที่ปรึกษา</h3>
-											</center>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> ชื่อ</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> นามสกุล</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> ตำแหน่งทางวิชาการ</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> Email</label>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="form-group label-floating">
-												<label class="control-label"> เบอร์โทรติดต่อ</label>
-												<input  maxlength="12"type="text" onkeyup="Format(this,3)" class="form-control">
-											</div>
-										</div>
+                </div>
+            </div>
+        </div>
+        <span class="input-group-btn">
+            <button style="font-family: 'Prompt', sans-serif;" href="" type="submit" class="btn btn-primary btn-form display-4">ถัดไป</button>
+        </span>
+    </section>
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p style="font-family: 'Prompt', sans-serif;" class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2018 CS-CAMP#X &nbsp;- All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
 
 
-										<div class="col-md-12 ">
-
-											<center>
-												<input style="margin-top:50px; margin-bottom:50px;" type="checkbox" name="Accept" data-form-field="Accept" required="" id="name-form1-2c">
-												<label>ข้าพเจ้ายินดีเข้าร่วมกิจกรรมค่าย CS-Camp ครั้งที่ 10 และจะปฏิบัติตามข้อกำหนดของค่ายฯทุกประการ</label>
-											</center>
-										</div>
-									</form>
-									<div class="col-md-12 ">
-										<center>
-											<a href="#messages" data-toggle="tab">
-												<button onclick="page2()" type="submit" class="btn btn-primary">ถัดไป</button>
-											</a>
-										</center>
-									</div>
-								</div>
-								<div class="tab-pane" id="messages">
-									<form action="" method="post">
-										<div class="col-md-12">
-											<br>
-											<br>
-											<div class="form-group label-floating">
-												<label class="control-label">1. หากในอนาคตอันใกล้นี้ มีการสร้างไทม์แมชชีน (Time Machine) ขึ้นมา แล้วน้องได้รับโอกาสให้ใช้งาน 1 ครั้ง โดยจะสามารถไปยังอดีต
-													หรือ อนาคต ก็ได้ น้องจะเลือกไปยังที่ใด ให้อธิบายพร้อมบอกเหตุผลประกอบมาพอสังเขป</label>
-												<textarea class="form-control" rows="4"></textarea>
-											</div>
-										</div>
-
-										<div class="col-md-12">
-											<div class="form-group label-floating">
-												<label style='font-size:14px;' class="control-label">2. เคยเขียนโปรแกรม (โปรแกรมมิ่ง) มาก่อนหรือไม่ </label>
-												<br>
-												<input style="font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;  " type="radio" name="Camp" value="Yes" checked> เคย
-												<input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="Camp" value="No" checked>ไม่เคย
-											</div>
-										</div>
-										<div class="col-md-12">
-											<label style='font-size:14px;' class="control-label">3. เคยเข้าร่วมการแข่งขันทางด้านเทคโนโลยี หรือคอมพิวเตอร์ใดมาบ้าง (หากได้รับรางวัล ให้ระบุรางวัล หรือตำแหน่งที่ได้รับมาด้วย)</label>
-											<br>
-											<br>
-											<input style="font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;  " type="radio" name="Camp" value="Yes" checked> เคย(หากเคยให้ใส่รายละเอียดเพิ่มติมด้วย)
-											<input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="Camp" value="No" checked>ไม่เคย
-
-											<textarea class="form-control" rows="4"></textarea>
-										</div>
-									</form>
-									<div class="col-md-12 ">
-										<center>
-											<a href="#profile" data-toggle="tab">
-												<button onclick="page1back()" class="btn btn-primary">ก่อนหน้า</button>
-											</a>
-											<a href="#settings" data-toggle="tab">
-												<button onclick="page3()" class="btn btn-primary">ถัดไป</button>
-											</a>
-										</center>
-									</div>
-								</div>
-								<div class="tab-pane" id="settings">
-									<br>
-									<br>
-									<form action="" method="post">
-										<div class="col-md-12">
-											<center>
-												<h3>ขั้นตอนการยืนยันสิทธ์</h3>
-											</center>
-										</div>
-										<div class="col-md-12">
-											<div class="col-md-2"></div>
-											<div class="col-md-4">
-												<div class="form-group label-floating">
-													<label class="control-label"> ชื่อบัญชี(ผู้โอน)</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="form-group label-floating">
-													<label class="control-label"> เบอร์โทรศัพท์(ผู้โอน)</label>
-													<input maxlength="12"type="text" onkeyup="Format(this,3)" class="form-control">
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="col-md-2"></div>
-											<div class="col-md-4">
-												<div class="form-group label-floating">
-													<label class="control-label">ธนาคาร</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="form-group label-floating">
-													<label class="control-label">จำนวนเงิน(0.00)</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-2"></div>
-										</div>
-										<div class="col-md-12">
-											<div class="col-md-2"></div>
-											<div class="col-md-4">
-												<div class="form-group label-static">
-													<label class="control-label">วันเวลาที่ทำการโอน</label>
-													<input type="date" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="form-group label-floating">
-													<label class="control-label">ช่วงเวลาที่ทำการโอน(ชั่วโมง-นาที)</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="col-md-2"></div>
-											<div class="col-md-3">
-												<div class="form-group label-floating">
-													<label>อัพโหลดหลักฐานการโอน</label>
-													<img style="border: 2px solid rgb(128, 73, 73); border-radius: 5px;" id="imgBlis" src="beforeblis.png" width="200">
-													<input id="inputBlis" type="file" name="UserImg" onchange="previewFile()">
-													<br>
-													<br>
-												</div>
-											</div>
-
-										</div>
-									</form>
-									<div class="col-md-12 ">
-										<center>
-											<a href="#messages" data-toggle="tab">
-												<button onclick="page2back()" class="btn btn-primary">ก่อนหน้า</button>
-											</a>
-											<a href="#" data-toggle="tab">
-												<button class="btn btn-primary">ยืนยันการลงทะเบียน</button>
-											</a>
-										</center>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<!-- End Tabs with icons on Card -->
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
+    <script src="assets/theme/js/script.js"></script>
 
 
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<p style="font-family: 'Prompt', sans-serif;" class="mbr-text mb-0 mbr-fonts-style display-7">
-								© Copyright 2018 CS-CAMP#X &nbsp;- All Rights Reserved
-							</p>
-						</div>
-					</div>
-				</div>
-
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+        <a style="text-align: center;">
+            <i></i>
+        </a>
+    </div>
+    <input name="animation" type="hidden">
 </body>
-<!--   Core JS Files   -->
-<script src="assets2/js/jquery.min.js" type="text/javascript"></script>
-<script src="assets2/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets2/js/material.min.js"></script>
-
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="assets2/js/nouislider.min.js" type="text/javascript"></script>
-
-<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-<script src="assets2/js/bootstrap-datepicker.js" type="text/javascript"></script>
-
-<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-<script src="assets2/js/material-kit.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-	$().ready(function () {
-		// the body of this function is in assets/material-kit.js
-		materialKit.initSliders();
-		window_width = $(window).width();
-
-		if (window_width >= 992) {
-			big_image = $('.wrapper > .header');
-
-			$(window).on('scroll', materialKitDemo.checkScrollForParallax);
-		}
-
-	});
-</script>
 
 </html>
