@@ -77,7 +77,7 @@
 										
 										<div class="col-sm-2 dropdown">
 											<label >คำนำหน้า</label>
-										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle"  >
+										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle">
                                         <option  value="นาย" >นาย</option>
                                         <option  value="นางสาว">นางสาว</option>
                                         <ul class="dropdown-menu">
@@ -89,13 +89,13 @@
 										</div>
                                    		 	<div class="col-md-3">
 												<div class="form-group label-floating">
-													<label class="control-label">ชื่อจริง</label>
+													<label class="control-label" name="UserName">ชื่อจริง</label>
 													<input type="text" class="form-control">
 												</div>
 											</div>
 											<div class="col-md-3">
 												<div class="form-group label-floating">
-													<label class="control-label">นามสกุล</label>
+													<label class="control-label" name="UserSurname">นามสกุล</label>
 													<input type="text" class="form-control">
 												</div>
 											</div>
@@ -103,14 +103,14 @@
 											
 											<div class="col-md-3">
 												<div class="form-group label-floating">
-													<label class="control-label">ชื่อเล่น</label>
+													<label class="control-label" name="UserNickname">ชื่อเล่น</label>
 													<input type="text" class="form-control">
 												</div>
 											</div>
 
 										<div class="col-md-2 dropdown">
 											<label >เพศ</label><br>
-										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle"  >
+										<select class="btn btn-simple dropdown-toggle" required="" name="UserGender">
                                         <option value="ชาย" >ชาย</option>
                                         <option  value="หญิง">หญิง</option>
                                         <ul class="dropdown-menu">
@@ -122,23 +122,23 @@
 										</div>
 										<div class="col-md-2 dropdown">
 											<label >Size เสื้อ</label><br>
-										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle"  >
-                                        <option  value="s" >s</option>
-                                        <option  value="m">m</option>
-                                        <option  value="l">l</option>
-                                        <option  value="xl">xl</option>
+										<select class="btn btn-simple dropdown-toggle" required="" name="Size">
+                                        <option  value="s" >S</option>
+                                        <option  value="m">M</option>
+                                        <option  value="l">L</option>
+                                        <option  value="xl">XL</option>
                                         <ul class="dropdown-menu">
-													<li><a href="#">s</a></li>
-													<li><a href="#">m</a></li>
-													<li><a href="#">l</a></li>
-													<li><a href="#">xl</a></li>
+													<li><a href="#">S</a></li>
+													<li><a href="#">M</a></li>
+													<li><a href="#">L</a></li>
+													<li><a href="#">XL</a></li>
 											</ul>
                                    		 </select>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label">เลขบัตรประชาชน</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="Idcard">
 											</div>
 										</div>  <br>
 									
@@ -152,43 +152,43 @@
 								         	<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label">อายุ(ปี)</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="Age">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> ศาสนา</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="Religion">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group label-floating">
 												<label class="control-label">ที่อยู่ที่สามารถติดต่อได้</label>
-												<textarea class="form-control" rows="4"></textarea>
+												<textarea class="form-control" rows="4" name="Address"></textarea>
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group label-floating">
 													<label class="control-label"> เบอร์โทรศัพท์</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="UserTel">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group label-floating">
 													<label class="control-label"> Line ID</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="UserLine">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group label-floating">
 													<label class="control-label"> Email</label>
-													<input type="email" class="form-control">
+													<input type="email" class="form-control" name="UserEmail">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="form-group label-floating">
 													<label class="control-label"> Facebook(Link Profile)</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="UserFacebook">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -198,19 +198,19 @@
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> โรงเรียน</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="School">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> สถานที่ตั้ง</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="SchoolAddress">
 											</div>
 										</div>
 
 										<div class="col-md-4 dropdown">
 											<label >ชั้นมัธยมศึกษาปีที่</label><br>
-										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle"  >
+										<select class="btn btn-simple dropdown-toggle" required="" name="Education">
                                         <option value="ม4" >ม.4</option>
                                         <option  value="ม5">ม.5</option>
                                         <ul class="dropdown-menu">
@@ -222,7 +222,7 @@
 										</div>
 										<div class="col-md-4 dropdown">
 											<label >แผนการเรียน</label><br>
-										<select class="btn btn-simple dropdown-toggle" required="" name="UserNameTitle"  >
+										<select class="btn btn-simple dropdown-toggle" required="" name="EducationType">
                                         <option value="วิทย์-คณิต" >วิทย์-คณิต</option>
                                         <ul class="dropdown-menu">
 													<li><a href="#">วิทย์-คณิต</a></li>
@@ -234,7 +234,7 @@
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เกรดเฉลี่ย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="GPA">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -243,37 +243,37 @@
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> อาหารที่แพ้</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="FoodAllergies">
 											</div>
 										</div>
 											<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> ยาที่แพ้</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="DrugAllergy">
 											</div>
 										</div>
 											<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> โรคประจำตัว</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CongenitalDisease">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group label-floating">
 												<label class="control-label">วิธีการรักษาเบื้องต้น</label>
-												<textarea class="form-control" rows="4"></textarea>
+												<textarea class="form-control" rows="4" name="Remedy"></textarea>
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เบอร์ติดต่อฉุกเฉิน</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="EmergencyNumbers">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เกี่ยวข้องเป็น</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="EmergencyType">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -282,31 +282,31 @@
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> ชื่อจริง</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="ContactName">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> นามสกุล</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="ContactSurname">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เกี่ยวข้องเป็น</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="ContactType">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group label-floating">
 												<label class="control-label">ที่อยู่ที่สามารถติดต่อได้</label>
-												<textarea class="form-control" rows="4"></textarea>
+												<textarea class="form-control" rows="4" name="ContactAddress"></textarea>
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เบอร์โทรศัพท์</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="ContactTel">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -336,37 +336,37 @@
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> ชื่อค่าย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampName1">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> จัดโดย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampOn1">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> ชื่อค่าย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampName2">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> จัดโดย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampOn2">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> ชื่อค่าย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampName3">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group label-floating">
 													<label class="control-label"> จัดโดย</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="CampOn3">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -375,31 +375,31 @@
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> ชื่อ</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="TeacherName">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> นามสกุล</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="TeacherSurname">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> ตำแหน่งทางวิชาการ</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="TeacherType">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> Email</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="TeacherEmail">
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group label-floating">
 													<label class="control-label"> เบอร์โทรติดต่อ</label>
-													<input type="text" class="form-control">
+													<input type="text" class="form-control" name="TeacherTel">
 											</div>
 										</div>
 										
@@ -417,17 +417,17 @@
 										<div class="col-md-12">
 											<div class="form-group label-floating">
 												<label class="control-label">1. หากในอนาคตอันใกล้นี้ มีการสร้างไทม์แมชชีน (Time Machine) ขึ้นมา แล้วน้องได้รับโอกาสให้ใช้งาน 1 ครั้ง โดยจะสามารถไปยังอดีต หรือ อนาคต ก็ได้ น้องจะเลือกไปยังที่ใด ให้อธิบายพร้อมบอกเหตุผลประกอบมาพอสังเขป</label>
-												<textarea class="form-control" rows="4"></textarea>
+												<textarea class="form-control" rows="4" name="EX1"></textarea>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<h4 style=" font-family: 'Prompt',">2. เคยเขียนโปรแกรม (โปรแกรมมิ่ง) มาก่อนหรือไม่ </h4>
-                                            <input style="font-family: 'Prompt',  " type="radio" name="Camp" value="Yes" checked> เคย
+                                            <input style="font-family: 'Prompt',  " type="radio" name="EX2" value="Yes" checked> เคย
                                             <input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="Camp" value="No" checked>ไม่เคย
 										</div>
 										<div class="col-md-12">
 											<h4 style=" font-family: 'Prompt',">3. เคยเข้าร่วมการแข่งขันทางด้านเทคโนโลยี หรือคอมพิวเตอร์ใดมาบ้าง (หากได้รับรางวัล ให้ระบุรางวัล หรือตำแหน่งที่ได้รับมาด้วย) </h4>
-                                            <input style="font-family: 'Prompt',  " type="radio" name="Camp" value="Yes" checked> เคย(หากเคยให้ใส่รายละเอียดเพิ่มติมด้วย)
+                                            <input style="font-family: 'Prompt',  " type="radio" name="EX3" value="Yes" checked> เคย(หากเคยให้ใส่รายละเอียดเพิ่มติมด้วย)
                                             <input style=" font-family: 'Prompt', sans-serif;width:20px; margin-left:50px;" type="radio" name="Camp" value="No" checked>ไม่เคย
                                            
                                             <textarea class="form-control" rows="4"></textarea>
